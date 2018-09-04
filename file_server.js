@@ -3,7 +3,7 @@
 const { createServer } = require("http");
 
 // object holds the handlers for GET, PUT, DELETE, etc.
-const methods = require("./handlers"); //Object.create(null);
+const methods = require("./handlers");
 
 createServer((request, response) => {
     let handler = methods[request.method] || notAllowed;
